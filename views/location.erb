@@ -2,10 +2,14 @@
 Behold, the night sky of <%=params.fetch("location")%>.
 </h1>
 
+
 <p>
-<%=@parsed_response %>
+<%=ENV.fetch('KEY')%>
 </p>
 
 <p>
-<%=ENV.fetch('Sky_Key')%>
+<%=@long%>
+</p>
+<p>
+<%=@lat%>
 </p>
