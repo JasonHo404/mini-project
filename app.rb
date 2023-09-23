@@ -5,13 +5,16 @@ require "json"
 
 
 get("/") do
-erb(:home)
+  ENV.fetch("GMAPS_KEY") 
+  @mega = ENV.fetch("GMAPS_KEY")
+  erb(:home)
 end
 
 get('/output') do
 
   
   ENV.fetch("GMAPS_KEY") 
+  @mega = ENV.fetch("GMAPS_KEY") 
   gmap_url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + params.fetch("location") +"&key=" + ENV.fetch("GMAPS_KEY") 
 
 
@@ -32,7 +35,6 @@ get('/output') do
   @long = @loc.fetch("lng")
 
 
-  ENV.fetch("KEY") 
 
 
   erb(:location)
