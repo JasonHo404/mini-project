@@ -1,18 +1,6 @@
 # Stars?! Yay
 
-Use this repository to create new Sinatra apps. 
+Mini-project (#1?) for DPI intro-course!
 
-Optionally, to use `ActiveRecord` for database operations, add to the `app.rb`:
 
-```ruby
-require "sinatra/activerecord"
-```
-
-And in the `config/environment.rb` file add this code block:
-
-```ruby
-configure do
-  # setup a database connection
-  set(:database, { adapter: "sqlite3", database: "db/development.sqlite3" })
-end
-```
+Here,  I cobbled together a site that will take your input location and put you there on the ground, allowing you to look up and see the stars. 
