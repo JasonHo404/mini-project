@@ -1,6 +1,26 @@
-<h1>
+<h1 style="color:white"> 
 Behold, the night sky of <%=params.fetch("location")%>.
 </h1>
+<p style="color:white">
+Showing <br>
+Longitude: <%=@long%>  
+Latitude:<%=@lat%>
+</p>
+<form action="/output" style="display: inline; color: white;">
+  <div>
+    <label for="location">
+      New Location? (No spaces please.)
+    </label>
 
-<iframe width="1000" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://slowe.github.io/VirtualSky/embed?longitude=-87.6298&latitude=41.8781&projection=lambert&constellationlabels=true&showstarlabels=true&live=true&az=138" allowTransparency="true">
+    <input id="location" text="text" name="location" placeholder="E.g. Chicago" autocomplete="off">
+  </div>
+  <button >
+    Enter
+  </button>
+</form>
+
+
+
+<iframe src="https://slowe.github.io/VirtualSky/embed?longitude=<%=@long%>&latitude=<%=@lat%>&projection=lambert&constellationlabels=true&showstarlabels=true&showposition=false&live=true&az=138" width="1900" height="740" frameborder="0" scrolling="no" marginheight="0" marginwidth="20"  allowTransparency="true" style="max-width:100%" > 
 </iframe>
+<body style="background-color:black;">
